@@ -26,8 +26,7 @@ requirements:
     - numpy >=1.16
     - packaging
     - pandas
-    - pyarrow
-    - ray-train >=2.0
+    - ray-train >=2.7
     - wrapt >=1.12.1
     - xgboost >=0.90
 
