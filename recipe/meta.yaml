@@ -1,5 +1,5 @@
 {% set name = "xgboost_ray" %}
-{% set version = "0.1.18" %}
+{% set version = "0.1.19" %}
 {% set build_num = 0 %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 495ee6d62ca4ad752f5407a006371559d93f3a937abde2806b0c977fed136ca3
+  sha256: 03e3661712daa1c2208086161881129bb6ec3e19bcd04742ace11191922236d0
 
 build:
   noarch: python
@@ -26,8 +26,7 @@ requirements:
     - numpy >=1.16
     - packaging
     - pandas
-    - pyarrow
-    - ray-train >=2.0
+    - ray-train >=2.7
     - wrapt >=1.12.1
     - xgboost >=0.90
 
