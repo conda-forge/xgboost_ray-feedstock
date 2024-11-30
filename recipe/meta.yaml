@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 03e3661712daa1c2208086161881129bb6ec3e19bcd04742ace11191922236d0
 
 build:
@@ -19,10 +19,10 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - numpy >=1.16
     - packaging
     - pandas
@@ -31,6 +31,8 @@ requirements:
     - xgboost >=0.90
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - xgboost_ray
 
